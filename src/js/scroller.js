@@ -18,9 +18,7 @@ document.body.addEventListener('mouseleave',function(){
 
 document.body.addEventListener('mousemove',function(e){
   if (!active) return;
-
   let x = e.pageX;
-
   x -= document.querySelector('.wrpr').getBoundingClientRect().left;
 
   scrollIt(x);
@@ -29,7 +27,7 @@ document.body.addEventListener('mousemove',function(e){
 function scrollIt(x){
   let transform = Math.max(0,(Math.min(x,document.querySelector('.wrpr').offsetWidth)));
   if (active==="img-before"){
-    document.querySelector('.img-before').style.width = transform+"px";
+    document.querySelector('.img-before').style.clipPath = "inset(0 0 0 " + transform + "px)";
     scroller.style.left = transform-25+"px";    
   }
 }
