@@ -92,7 +92,7 @@ nav .sidenav .active {
   .companies {
     display: flex;
     flex-direction: row ;
-    max-width: 1000px ;
+    max-width: 1120px ;
     overflow: unset;
     margin: 0 auto;
 
